@@ -11,7 +11,7 @@ def main():
         text=input()
         lex = lx.Lexer(text)
         par = syn.Parser(lex)
-        smtff = tiff.Semantiff(par)
+        smtff.parser=par
         smtff.find()
         print(smtff.symtab)
 
